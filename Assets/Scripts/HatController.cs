@@ -19,7 +19,7 @@ public class HatController : MonoBehaviour
 	
 	void FixedUpdate () {
 		var rawPosition = cam.ScreenToWorldPoint(Input.mousePosition);
-		var targetPosition = new Vector3(rawPosition.x,0.0f,0.0f);
+		var targetPosition = new Vector3(rawPosition.x,transform.position.y,0.0f);
 		float targetWidth = Mathf.Clamp (targetPosition.x,-maxWidth,maxWidth);
 		targetPosition = new Vector3(targetWidth,targetPosition.y,targetPosition.z);
 		rigidbody2D.MovePosition(targetPosition);
