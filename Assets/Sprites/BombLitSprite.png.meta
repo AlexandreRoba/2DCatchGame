@@ -1,6 +1,8 @@
 fileFormatVersion: 2
 guid: 23f2dcab7a131324d922cfb2bd07db80
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: BombLitSprite
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

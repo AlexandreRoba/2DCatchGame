@@ -1,6 +1,8 @@
 fileFormatVersion: 2
 guid: a3dde001bc3076e4ca0998fe4d32ade3
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: PuffSprite
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

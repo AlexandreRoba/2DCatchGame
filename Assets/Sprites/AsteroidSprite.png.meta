@@ -1,6 +1,8 @@
 fileFormatVersion: 2
 guid: bc15c6ea9b0124465b164fd3e89c578d
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: AsteroidSprite
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

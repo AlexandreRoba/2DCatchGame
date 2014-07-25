@@ -1,6 +1,8 @@
 fileFormatVersion: 2
 guid: 90f91bf07d6aec14bb60e830bf64792c
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: TruckChassisSprite
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

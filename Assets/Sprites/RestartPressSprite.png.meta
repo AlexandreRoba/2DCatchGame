@@ -1,6 +1,8 @@
 fileFormatVersion: 2
 guid: a414f6cc2bd8e5745a003049a80c3fa5
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: RestartPressSprite
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

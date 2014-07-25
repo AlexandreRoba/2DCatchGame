@@ -1,6 +1,8 @@
 fileFormatVersion: 2
 guid: 3bb40c4bb20b72940ba2dd57ae30f88c
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: GrassSprite
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

@@ -1,6 +1,8 @@
 fileFormatVersion: 2
 guid: 0dbf0796eff2d254381244d5bf00a9e3
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: RestartHoverSprite
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

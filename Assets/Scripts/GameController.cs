@@ -20,6 +20,7 @@ public class GameController : MonoBehaviour
 	
 	IEnumerator Spawn()
 	{
+		yield return new WaitForSeconds(2.0f);
 		while(true){
 			Vector3 spawnPosition = new Vector3(Random.Range(-maxWidth,maxWidth),transform.position.y,0.0f);
 			Quaternion spawRotation = Quaternion.identity;

@@ -1,6 +1,8 @@
 fileFormatVersion: 2
 guid: dede5f4548992dd4ba1c9840a451ed31
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: SkySprite
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
