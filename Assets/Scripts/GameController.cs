@@ -10,6 +10,9 @@ public class GameController : MonoBehaviour
 	public float timeLeft;
 	public UILabel timerText;
 	
+	public GameObject gameOverText;
+	public GameObject restartButton;
+	
 	void Start () 
 	{
 		if(cam==null)
@@ -19,7 +22,7 @@ public class GameController : MonoBehaviour
 		float ballWidth = ball.renderer.bounds.extents.x;
 		maxWidth = targetWidth.x-ballWidth;
 		StartCoroutine(Spawn ());
-		updateTimer ();
+		updateTimerText ();
 	}
 	
 	void FixedUpdate()
@@ -27,7 +30,7 @@ public class GameController : MonoBehaviour
 		timeLeft -= Time.deltaTime;
 		if(timeLeft<0)
 			timeLeft = 0;
-		updateTimer();
+		updateTimerText();
 	}
 	
 	IEnumerator Spawn()
@@ -39,13 +42,22 @@ public class GameController : MonoBehaviour
 			Instantiate (ball,spawnPosition, spawRotation);
 			yield return new WaitForSeconds(Random.Range (1.0f,2.0f));
 		}
+		yield return new WaitForSeconds(2.0f);
+		gameOverText.SetActive(true);
+		yield return new WaitForSeconds(2.0f);
+		restartButton.SetActive (true);
 	}
 	
-	void updateTimer()
+	void updateTimerText()
 	{
 		if(timerText!=null)
 		{
 			timerText.text ="Time Left:\n" + Mathf.RoundToInt(timeLeft).ToString();
 		}
+	}
+	
+	public void RestartGame()
+	{
+		Application.LoadLevel(Application.loadedLevel);
 	}
 }
