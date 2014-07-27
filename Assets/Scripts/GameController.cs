@@ -19,12 +19,15 @@ public class GameController : MonoBehaviour
 		float ballWidth = ball.renderer.bounds.extents.x;
 		maxWidth = targetWidth.x-ballWidth;
 		StartCoroutine(Spawn ());
+		updateTimer ();
 	}
 	
 	void FixedUpdate()
 	{
 		timeLeft -= Time.deltaTime;
-		timerText.text ="Time Left:\n" + Mathf.RoundToInt(timeLeft).ToString();
+		if(timeLeft<0)
+			timeLeft = 0;
+		updateTimer();
 	}
 	
 	IEnumerator Spawn()
@@ -35,6 +38,14 @@ public class GameController : MonoBehaviour
 			Quaternion spawRotation = Quaternion.identity;
 			Instantiate (ball,spawnPosition, spawRotation);
 			yield return new WaitForSeconds(Random.Range (1.0f,2.0f));
+		}
+	}
+	
+	void updateTimer()
+	{
+		if(timerText!=null)
+		{
+			timerText.text ="Time Left:\n" + Mathf.RoundToInt(timeLeft).ToString();
 		}
 	}
 }
